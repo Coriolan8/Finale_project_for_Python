@@ -3,7 +3,7 @@ from .locators import ProductPageLocators
 
 
 class ProductPage(BasePage):
-    def add_item_in_basket(self):
+    def add_product_in_basket(self):
         self.browser.find_element(*ProductPageLocators.ADD_BASKET).click()
         self.solve_quiz_and_get_code()
         self.should_be_right_item()
